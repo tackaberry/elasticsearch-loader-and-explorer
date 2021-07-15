@@ -1,0 +1,30 @@
+plugins:
+  - serverless-offline
+  - serverless-dotenv-plugin
+
+service: ijf
+
+package:
+  exclude:
+    - node_modules/aws-sdk/**
+    - .github/**
+    - .vscode/**
+    - .eslintignore
+    - .eslintrc.json
+    - package-lock.json
+    - package.json
+    - README.md
+    - test/**
+    - docs/**
+    - coverage/**
+  excludeDevDependencies: true
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  function:
+    handler: app.handler
+    name: ${self:service}
+    timeout: 600 # optional, in seconds, default is 6

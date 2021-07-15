@@ -1,0 +1,19 @@
+{
+  "name": "ijf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "invoke": "serverless invoke local -f function -s local"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-dotenv-plugin": "^3.9.0",
+    "serverless-offline": "^7.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "elasticsearch": "^16.7.2"
+  }
+}
